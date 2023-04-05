@@ -51,5 +51,11 @@ def decode_char(c)
 end
 
 def decode_word(s)
-  s.split(" ").map { |c| decode_char(c) }.join(" ")
+  s.split(" ").map { |c| decode_char(c) }.join
 end
+
+def decode(p)
+  newArray = p.split("   ").map {|s| decode_word(s)}.join(" ")
+end
+
+puts decode("-- -.--   -. .- -- .")
