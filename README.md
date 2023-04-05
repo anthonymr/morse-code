@@ -1,67 +1,127 @@
-# Ruby Course
+<a name="readme-top"></a>
 
-If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).
+# 📗 Table of Contents
 
-## Set-up Rubocop GitHub Action
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Usage](#usage)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
 
-[Rubocop](https://www.rubocop.org/) is a Ruby static code analyzer (a.k.a. linter) and code formatter. It will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://rubystyle.guide/).
+- [📝 License](#license)
 
-This GitHub Action is going to run [Rubocop](https://docs.rubocop.org/en/stable/) to help you find style issues.
+<!-- PROJECT DESCRIPTION -->
 
-Please do the following **steps in this order**:
+# 📖 Morse code <a name="about-project"></a>
 
-1. In the first commit of your feature branch create a `.github/workflows` folder and add a copy of [`.github/workflows/linters.yml`](.github/workflows/linters.yml) to that folder.
-    - **Remember** to use the file linked above
-    - **Remember** that `.github` folder starts with a dot.
-2. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-3. When you open your first pull request you should see the result of the GitHub Actions:
+> This ruby method is used to decode a string of morse code to english.
 
-![gh actions checks](../assets/images/gh-actions-rubocop-linters-checks.png)
+## Project Screenshots
 
-Click on the `Details` link to see the full output and the errors that need to be fixed:
+## 🛠 Built With <a name="built-with"></a>
 
-![gh actions failing checks](../assets/images/gh-actions-rubocop-failing-checks.png)
+### Tech Stack <a name="tech-stack"></a>
 
-## [OPTIONAL]Set-up RSpec GitHub Action
+- <a href="https://www.ruby-lang.org/es/">Ruby</a>
 
-You can run your tests with GitHub Actions to ensure that they are passing before merging a PR.
+<!-- Features -->
 
-To use the GitHub Action to run your tests, please do the following **steps in this order**:
+### Key Features <a name="key-features"></a>
 
-1. Add a copy of [`.github/workflows/tests.yml`](.github/workflows/tests.yml) to your `.github/workflows` folder.
-    - **Remember** to use the file linked above
-    - Do not modify or delete the [`.github/workflows/linters.yml`](.github/workflows/linters.yml) file that should already be in that folder.
-    - RSpec by default will try to run any file ending in `_spec.rb` inside the `spec` folder. Make sure to follow this convention for your tests files so `rspec` can run your spec files.
-    - You can modify the [`.github/workflows/tests.yml`](.github/workflows/tests.yml) file to better fit your custom needs.
-3. When you open your pull request you should see the result of the GitHub Action:
+- Accepting morse code as a string and returning a string of english words.
 
-![gh actions checks](../assets/images/gh-actions-rspec-tests-checks.png)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Click on the `Details` link of the test action to check the results of your tests.
+<!-- GETTING STARTED -->
 
-## Set-up linters in your local env
+## 💻 Getting Started <a name="getting-started"></a>
 
-### [RuboCop](https://docs.rubocop.org/en/stable/)
+### Prerequisites
 
-1. Add this line to the `Gemfile`
-    ```
-    gem 'rubocop', '>= 1.0', '< 2.0'
-    ```
-    *not sure how to use Gemfile? Read [this](https://bundler.io/v1.15/guides/bundler_setup.html).*
-2. Run `bundle install`.
-3. Copy [.rubocop.yml](./.rubocop.yml) to the root directory of your project
-4. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-5. Run `rubocop`.
-6. Fix linter errors.
-7. **IMPORTANT NOTE**: feel free to research [auto-correct options for Rubocop](https://rubocop.readthedocs.io/en/latest/auto_correct/) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+In order to run this project you need installed Ruby on your local machine.
 
-## Troubleshooting
+### Setup
 
-- While using Colorize gem, if you are facing errors with Rspec related to 
-    ```bash
-    LoadError:
-    cannot load such file -- colorize
-    ```
-    please remove ```--deployment``` from line no. [26](https://github.com/shubham14p3/Ruby-capstone-project/blob/ca86784cc88bea7c933e329c0953f07e21bcf6ca/.github/workflows/tests.yml#L16) of test.yml file.
+Clone this repository to your local machine:
+
+```sh
+  git clone https://github.com/anthonymr/morse-code.git
+  cd morse-code
+
+```
+
+### Usage
+
+To run the project, execute the following command in terminal:
+
+```
+    ruby main.rb
+```
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **zewdu erkyhun**
+
+- GitHub: [zewdu444](https://github.com/zewdu444)
+- Twitter: [@zewdu444](https://twitter.com/zewdu444)
+- LinkedIn: [zewdu-anley](https://www.linkedin.com/in/zewdu-anley/)
+
+👤 **Anthony Martin**
+
+- GitHub: [anthonymr](https://github.com/anthonymr)
+- Twitter: [@Anthony2Martin](https://twitter.com/Anthony2Martin)
+- LinkedIn: [anthony-martin](https://www.linkedin.com/in/anthony-martin-8820a3117/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> We will support more languages in the future.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/anthonymr/morse-code/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+Give a ⭐️ if you like this project!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+we would like to thank microverse community for the support and guidance.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
