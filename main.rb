@@ -58,4 +58,4 @@ def decode(p)
   newArray = p.split("   ").map {|s| decode_word(s)}.join(" ")
 end
 
-puts decode("-- -.--   -. .- -- .")
+puts decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
